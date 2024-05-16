@@ -1,2 +1,2 @@
-# portfolio
-Website for my portfolio
+# PORTFOLIO 
+Code for the website of my portfolio.
