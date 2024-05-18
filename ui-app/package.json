@@ -21,6 +21,9 @@
   "devDependencies": {
     "@babel/core": "^7.24.5",
     "@babel/preset-react": "^7.24.1",
-    "frontmatter-markdown-loader": "^3.7.0"
+    "autoprefixer": "^10.4.19",
+    "frontmatter-markdown-loader": "^3.7.0",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3"
   }
 }
