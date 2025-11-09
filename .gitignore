@@ -9,3 +9,6 @@ package-lock.json
 
 # .next
 .next
+
+# build file
+out
