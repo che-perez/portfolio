@@ -17,3 +17,32 @@ collections:
         - { label: "Specialization", name: "specialization", widget: "string"}
         - { label: "Experience", name: "experience", widget: "string"}
         - { label: "Status", name: "status", widget: "string"}
+    - label: "About"
+      name: "about"
+      file: "content/about.md"
+      fields:
+        - { label: "Introduction", name: "intro", widget: "markdown"}
+        - label: "Jobs"
+          name: "jobs"
+          widget: list
+          fields:
+            - { label: "Company Name", name: "company_name", widget: "string", required: true}
+            - { label: "Role", name: "role", widget: "string", required: true}
+            - label: "Start Year"
+              name: "start_year"
+              widget: "number"
+              value_type: "int"
+              min: 2018
+              max: 2050
+              required: true
+            - label: "End Year"
+              name: "end_year"
+              widget: "number"
+              value_type: "int"
+              min: 2018
+              max: 2050
+            - label: "Job Details"
+              name: "job_details"
+              widget: "list"
+              fields:
+                - { label: "Detail", name: "detail", widget: "string"}
