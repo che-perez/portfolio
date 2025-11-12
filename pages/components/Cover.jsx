@@ -71,7 +71,7 @@ export default function Cover() {
             {/* Right Column - Photo */}
             <div className="border-4 border-[#4A3829] bg-[#C9B99A] aspect-[3/4] flex items-center justify-center relative lg:mt-0 overflow-hidden"
               style={{ boxShadow: 'inset 0 0 30px rgba(92,74,58,0.15), 4px 4px 10px rgba(74,56,41,0.3)'}}>
-              <img src={profile_pic} alt="Developer profile" className="w-full h-full object-cover"/> 
+              <img src={profile_pic} alt="Profile Picture" className="w-full h-full object-cover" onContextMenu = {(e) => e.preventDefault()}/> 
                {/* <User className="w-32 h-32 text-[#2C2416]" strokeWidth={1} />  */}
             </div>
           </div>
