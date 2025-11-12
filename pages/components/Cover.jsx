@@ -7,6 +7,8 @@ export default function Cover() {
 
   let { name, position, department, specialization, experience, status } = attributes;
 
+  let profile_pic = "/assets/Profile_Picture.jpg";
+
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 pb-12 bg-[#E8DCC4]">
       <div className="relative z-10 max-w-6xl mx-auto px-6 w-full">
@@ -67,8 +69,10 @@ export default function Cover() {
             </div>
 
             {/* Right Column - Photo */}
-            <div className="border-4 border-[#2C2416] bg-[#D4C5A9] aspect-[3/4] flex items-center justify-center">
-              <User className="w-32 h-32 text-[#2C2416]" strokeWidth={1} />
+            <div className="border-4 border-[#4A3829] bg-[#C9B99A] aspect-[3/4] flex items-center justify-center relative lg:mt-0 overflow-hidden"
+              style={{ boxShadow: 'inset 0 0 30px rgba(92,74,58,0.15), 4px 4px 10px rgba(74,56,41,0.3)'}}>
+              <img src={profile_pic} alt="Developer profile" className="w-full h-full object-cover"/> 
+               {/* <User className="w-32 h-32 text-[#2C2416]" strokeWidth={1} />  */}
             </div>
           </div>
 
@@ -83,3 +87,4 @@ export default function Cover() {
     </section>
   );
 }
+
