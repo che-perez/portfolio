@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Cover from "./components/Cover";
 import About from "./components/About";
 import Skills from "./components/Skills";
+import Contact from "./components/Contacts";
 
 export default function Portfolio() {
   const [scrollY, setScrollY] = useState(0);
@@ -50,6 +51,7 @@ export default function Portfolio() {
         <Cover />
         <About />
         <Skills />
+        <Contact />
 
         {/* Footer */}
         <footer className="bg-[#D4C5A9] border-t-2 border-[#2C2416] py-6">
