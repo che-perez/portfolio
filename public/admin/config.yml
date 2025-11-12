@@ -46,3 +46,17 @@ collections:
               widget: "list"
               fields:
                 - { label: "Detail", name: "detail", widget: "string"}
+    - label: "Skills"
+      name: "skills"
+      file: "content/skills.md"
+      fields:
+        - label: "Skills Box"
+          name: "skills_box"
+          widget: "list"
+          fields:
+            - {label: "Title", name: "title", widget: "string"}
+            - label: "Skill List"
+              name: "skill_list"
+              widget: "list"
+              fields:
+                - {label: "Skill Name", name: "skill_name", widget: "string"}
