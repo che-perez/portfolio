@@ -10,7 +10,7 @@ jobs:
         - detail: Created data extensions to filter customers data for a more targeted campaigns.
         - detail: Worked with the Journey Builder tool to design, built and maintain multiple campaigns.
     - company_name: Blue State, New York
-      role: Fron-End Developer
+      role: Front-End Developer
       year_start: 2018
       year_end: 2021
       job_details:

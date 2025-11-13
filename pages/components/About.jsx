@@ -10,24 +10,25 @@ export default function About() {
   const { jobs } = attributes;
 
   return (
-    <section id="about" ref={ref} className="py-20 bg-[#D4C5A9]">
+    <section id="about" ref={ref} className="py-20 bg-[#D4C5A9]" aria-labelledby="about-heading">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="border-4 border-[#2C2416] bg-[#F5EFE0] p-8 md:p-12">
+          className="border-4 border-[#2C2416] bg-[#F5EFE0] p-8 md:p-12"
+          role="article">
           
           {/* Header */}
-          <div className="border-b-2 border-[#2C2416] pb-4 mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-wider uppercase">
+          <header className="border-b-2 border-[#2C2416] pb-4 mb-8">
+            <h2 id="about-heading" className="text-3xl md:text-4xl font-bold tracking-wider uppercase">
               SECTION A: PERSONNEL BACKGROUND
             </h2>
-          </div>
+          </header>
 
           {/* Remarks Section */}
           <div className="mb-8">
-            <p className="font-bold uppercase tracking-wider mb-4 text-lg">REMARKS:</p>
+            <h3 className="font-bold uppercase tracking-wider mb-4 text-lg">REMARKS:</h3>
             <div className="space-y-4 text-base uppercase  leading-relaxed">
               <Intro/>
             </div>
@@ -36,10 +37,10 @@ export default function About() {
           {/* Job Experience Section */}
           <div className="border-t-2 border-[#4A3829] pt-8">
             <h3 className="font-bold uppercase tracking-wider mb-6 text-lg flex items-center gap-2 text-[#2C1810]">
-              <span className="w-2 h-2 bg-[#1A1410]" />
+              <span className="w-2 h-2 bg-[#1A1410]" aria-hidden="true"/>
               EMPLOYMENT HISTORY:
             </h3>
-            <div className="space-y-6">
+            <div className="space-y-6" role="list" aria-label="Work Experience">
               {jobs.map((job, index) => (
                 <motion.article
                   key={index}
@@ -47,10 +48,11 @@ export default function About() {
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="border-2 border-[#5C4A3A] bg-[#E8D7BE] p-6 relative"
+                  role="listitem"
                   style={{ boxShadow: '4px 4px 12px rgba(92,74,58,0.25), inset 0 0 20px rgba(218,165,32,0.06)'}}>
 
                   {/* Paper clip mark */}
-                  <div className="absolute -left-2 top-8 w-4 h-4 rounded-full bg-[#CFC0A3] border-2 border-[#6B5644]" /> 
+                  <div className="absolute -left-2 top-8 w-4 h-4 rounded-full bg-[#CFC0A3] border-2 border-[#6B5644]" aria-hidden="true"/> 
                   
                   <header className="border-b border-[#6B5644] pb-3 mb-4">
                     <div className="flex justify-between items-baseline flex-wrap gap-2">
@@ -66,10 +68,10 @@ export default function About() {
                     <div className="text-xs font-bold tracking-widest mb-3 uppercase text-[#3D2F1F] flex items-center gap-2">
                       <span>KEY RESPONSIBILITIES:</span>
                     </div>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2" aria-label={`Responsibilities at ${job.company_name}`}>
                       {job.job_details.map((dt, idx) => (
                         <li key={idx} className="flex items-start gap-2 uppercase text-sm text-[#1A1410]">
-                          <span className="w-1.5 h-1.5 bg-[#1A1410] mt-1.5 flex-shrink-0" />
+                          <span className="w-1.5 h-1.5 bg-[#1A1410] mt-1.5 flex-shrink-0" aria-hidden="true" />
                           <span>{dt.detail}</span>
                         </li>
                       ))}
