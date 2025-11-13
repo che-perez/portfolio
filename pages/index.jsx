@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Cover from "./components/Cover";
 import About from "./components/About";
 import Skills from "./components/Skills";
+import Projects from "./components/Projects";
 import Contact from "./components/Contacts";
 
 export default function Portfolio() {
@@ -21,6 +22,7 @@ export default function Portfolio() {
   return (
     <>
       <Head>
+        <title>Josue Perez - Developer File</title>
          <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </Head>
       <div className="bg-[#E8DCC4] text-[#2C2416] overflow-x-hidden" style={{ fontFamily: "'Courier New', monospace" }}>
@@ -51,6 +53,7 @@ export default function Portfolio() {
         <Cover />
         <About />
         <Skills />
+        <Projects />
         <Contact />
 
         {/* Footer */}
