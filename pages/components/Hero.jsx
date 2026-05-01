@@ -6,8 +6,10 @@ import { attributes } from "../../content/cover.md"
 export default function Hero() {
 
   let { name, position, department, specialization, experience, status } = attributes;
-
-  let profile_pic = "/assets/Profile_Picture.jpg";
+  
+  const profile_pic = "/assets/Profile_Picture.jpg";
+  const adminSF = "/assets/SFA.png";
+  const platSF = "/assets/SFPDI.png";
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 pb-12 bg-[#E8DCC4]" aria-labelledby="cover-heading">
@@ -66,6 +68,21 @@ export default function Hero() {
                 <div className="flex gap-4 items-baseline border-b border-[#2C2416] pb-2 mt-3" role="listitem">
                   <span id="status-label" className="font-bold uppercase tracking-wider min-w-[140px]">STATUS:</span>
                   <span className="flex-1 font-bold uppercase" aria-labelledby="status-label">{status}</span>
+                </div>
+              </div>
+
+              {/** Salesforce Certification Badges */}
+              <div className="mt-6 md:mt-8 pt-6 border-t-2 border-[#4A3829]">
+                <h2 className="font-bold uppercase tracking-wider mb-4 text-sm md:text-base flex items-center gap-2 text-[#2C1810]">
+                  <span aria-hidden="true">Salesforce Certifications:</span>
+                </h2>
+                <div className="flex flex-wrap gap-6 md:gap-8" role="list" aria-label="Salesforce Certifications">
+                  <div role="listitem" className="flex flex-col items-center gap-2">
+                    <img src={adminSF} alt="Salesforce Certified Administrator Badge" className="w-20 h-20 md:w-24 md:h-24 object-contain drop-shadow-md" />
+                  </div>
+                  <div role="listitem" className="flex flex-col items-center gap-2">
+                    <img src={platSF} alt="Salesforce Certified Platform Developer I Badge" className="w-20 h-20 md:w-24 md:h-24 object-contain drop-shadow-md" />
+                  </div>
                 </div>
               </div>
             </div>
